@@ -51,21 +51,12 @@ set foldlevel=99
 nnoremap <space> za
 
 " PEP Indentation
-au BufNewFile,BufRead *.py, *.ts
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+au BufNewFile,BufRead *.py,*.ts set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
 
-au BufNewFile,BufRead *.js, *.html, *.css, *.scss
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+au BufNewFile,BufRead *.js,*.html,*.css,*.scss set tabstop=2 softtabstop=2 shiftwidth=2
 
 " Flag whitespace
+highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 set encoding=utf-8
@@ -98,10 +89,10 @@ endif
 " F5 toggle dark and light
 "call togglebg#map("<F5>")
 
-" Turn on line numbers
-set nu
+" turn hybrid line numbers on
+:set number relativenumber
+:set nu rnu
 
 " Accesses system clipboard?
 set clipboard=unnamed
-
 
