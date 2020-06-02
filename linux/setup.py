@@ -1,3 +1,3 @@
 
 def main(args):
-	print("Running Linux environment setup...")
+	print("Running Linux specific environment setup...")
