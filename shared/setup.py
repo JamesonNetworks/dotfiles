@@ -29,7 +29,7 @@ def installVim(args):
         print("Overwriting vimrc")
         copyfile(PosixPath("./shared/vimrc"), PosixPath("~/.vimrc").expanduser())
         print("Overwriting input")
-        copyfile(PosixPath("./shared/vimrc"), PosixPath("~/.inputrc").expanduser())
+        copyfile(PosixPath("./shared/inputrc"), PosixPath("~/.inputrc").expanduser())
         print("Overwriting tmux")
         copyfile(PosixPath("./shared/tmux.conf"), PosixPath("~/.tmux.conf").expanduser())
 
