@@ -1,0 +1,11 @@
+{
+    "*.ts": {
+        "alternate": "{}.html"
+    },
+    "*.html": {
+        "alternate": "{}.scss"
+    },
+    "*.scss": {
+        "alternate": "{}.ts"
+    }
+}

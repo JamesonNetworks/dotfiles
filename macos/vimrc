@@ -25,7 +25,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-
+Plugin 'w0rp/ale'
+Plugin 'mitermayer/prettier'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'tpope/vim-projectionist'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -96,3 +99,6 @@ endif
 " Accesses system clipboard?
 set clipboard=unnamed
 
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|venv'
+
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming empty <", "unescaped &" , "lacks \"action", "is not recognized!", "discarding unexpected"]
