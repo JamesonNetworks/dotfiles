@@ -71,15 +71,15 @@ let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <leader>jd  :YcmCompleter GoTo<CR>
 
-"python with virtualenv support
-"py << EOF
-"import os
-"import sys
-"if 'VIRTUAL_ENV' in os.environ:
-"  project_base_dir = os.environ['VIRTUAL_ENV']
-"  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"  execfile(activate_this, dict(__file__=activate_this))
-"EOF
+" python with virtualenv support
+py3 << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
 
 " Syntax highlighting
 let python_highlight_all=1
@@ -110,3 +110,8 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming em
 "  \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
 "  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
 "  \ }
+
+" Python YouCompleteMe
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/youcompleteme/.ycm_extra_conf.py'
+
+:set colorcolumn=140
