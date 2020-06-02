@@ -116,3 +116,6 @@ if [ -f '/Users/bjameson/Development/google-cloud-sdk/completion.zsh.inc' ]; the
 alias dcd="docker-compose down"
 alias dcu="docker-compose up"
 
+alias tmux="TERM=screen-256color-bce tmux"
+set -g default-terminal "screen-256color"
+

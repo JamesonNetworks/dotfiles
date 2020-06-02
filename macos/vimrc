@@ -56,7 +56,9 @@ nnoremap <space> za
 " PEP Indentation
 au BufNewFile,BufRead *.py,*.ts set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
 
-au BufNewFile,BufRead *.js,*.html,*.css,*.scss set tabstop=2 softtabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.js,*.css,*.scss set tabstop=2 softtabstop=2 shiftwidth=2
+
+au BufNewFile,BufRead *.html set tabstop=4 softtabstop=4 shiftwidth=4
 
 " Flag whitespace
 highlight BadWhitespace ctermbg=red guibg=darkred
@@ -67,6 +69,7 @@ set encoding=utf-8
 " YouCompleteMe settings
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+map <leader>jd  :YcmCompleter GoTo<CR>
 
 "python with virtualenv support
 "py << EOF

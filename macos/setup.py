@@ -30,6 +30,8 @@ def installVim(args):
         copyfile(PosixPath("./macos/vimrc"), PosixPath("~/.vimrc").expanduser())
         print("Overwriting input")
         copyfile(PosixPath("./macos/vimrc"), PosixPath("~/.inputrc").expanduser())
+        print("Overwriting tmux")
+        copyfile(PosixPath("./macos/tmux.conf"), PosixPath("~/.tmux.conf").expanduser())
 
 
 
