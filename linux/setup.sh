@@ -1,2 +1,1 @@
-apt install zsh
-apt install build-essential cmake vim python3-dev golang
+apt install -y zsh build-essential cmake vim python3-dev golang
