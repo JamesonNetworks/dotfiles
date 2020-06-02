@@ -1,3 +1,4 @@
+from shutil import copyfile
 
 def main(args):
 	print("Running MacOS specific environment setup...")
