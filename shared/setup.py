@@ -9,6 +9,12 @@ def installZsh(args):
         os.system("sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"")
 
 
+def installZshSyntaxHighlighting(args):
+    zshHighlightDir = PosixPath("~/.zsh-syntax-highlighting").expanduser()
+    if not zshHighlightDir.exists():
+        os.system("git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-syntax-highlighting")
+
+
 def printInstruction(msg):
     print("---")
     print(msg)
