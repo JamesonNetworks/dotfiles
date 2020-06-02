@@ -35,6 +35,11 @@ def installVim(args):
             os.system('git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim')
         else:
             print("Vundle Found! Continuing with install...")
+
+        print("Insalling OhMyZsh")
+        installZsh(args=args)
+        print("Installing Zsh Syntax Highlighting")
+        installZshSyntaxHighlighting(args=args)
         print("Overwriting vimrc")
         copyfile(PosixPath("./shared/vimrc"), PosixPath("~/.vimrc").expanduser())
         print("Overwriting input")
