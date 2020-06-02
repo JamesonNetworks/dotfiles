@@ -2,6 +2,7 @@ from pathlib import PosixPath
 import os
 from shutil import copyfile
 
+
 def installZsh(args):
     print("Would check for zsh and ohmyzsh")
 

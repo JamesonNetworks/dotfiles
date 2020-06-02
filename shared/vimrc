@@ -54,11 +54,11 @@ set foldlevel=99
 nnoremap <space> za
 
 " PEP Indentation
-au BufNewFile,BufRead *.py,*.ts set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+au BufNewFile,BufRead *.py,*.ts set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=140 expandtab autoindent fileformat=unix
 
-au BufNewFile,BufRead *.js,*.css,*.scss set tabstop=2 softtabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.js,*.css,*.scss set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=140
 
-au BufNewFile,BufRead *.html set tabstop=4 softtabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.html set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=140
 
 " Flag whitespace
 highlight BadWhitespace ctermbg=red guibg=darkred
