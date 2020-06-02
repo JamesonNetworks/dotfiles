@@ -26,8 +26,6 @@ def installVim(args):
             os.system('git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim')
         else:
             print("Vundle Found! Continuing with install...")
-        print("Overwriting zshrc")
-        copyfile(PosixPath("./shared/zshrc"), PosixPath("~/.zshrc").expanduser())
         print("Overwriting vimrc")
         copyfile(PosixPath("./shared/vimrc"), PosixPath("~/.vimrc").expanduser())
         print("Overwriting input")
