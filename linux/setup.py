@@ -12,5 +12,4 @@ def main(args):
 
 
 def after(args):
-    os.system("cd ~/.vim/bundle/YouCompleteMe")
-    os.system("python3 install.py --all")
+    os.system("python3 ~/.vim/bundle/YouCompleteMe/install.py --all")
