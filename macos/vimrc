@@ -105,3 +105,8 @@ set clipboard=unnamed
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|pyc))$'
 
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming empty <", "unescaped &" , "lacks \"action", "is not recognized!", "discarding unexpected"]
+
+"let g:ctrlp_custom_ignore = {
+"  \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
+"  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+"  \ }
