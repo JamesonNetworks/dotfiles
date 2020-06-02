@@ -102,6 +102,6 @@ endif
 " Accesses system clipboard?
 set clipboard=unnamed
 
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|venv'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|pyc))$'
 
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming empty <", "unescaped &" , "lacks \"action", "is not recognized!", "discarding unexpected"]
