@@ -4,7 +4,9 @@ from shutil import copyfile
 
 
 def installZsh(args):
-    print("Would check for zsh and ohmyzsh")
+    ohmyzshDir = PosixPath("~/.oh-my-zsh").expanduser()
+    if not ohmyzshDir.exists():
+        os.system("sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"")
 
 
 def printInstruction(msg):
