@@ -16,6 +16,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
+Plugin 'SirVer/ultisnips'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
@@ -28,8 +29,8 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'w0rp/ale'
 Plugin 'mitermayer/prettier'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'tpope/vim-projectionist'
 Plugin 'taglist.vim'
+Plugin 'a.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -152,14 +153,15 @@ call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
-let g:projectionist_heuristics = {
-      \   "*.ts": {
-      \     "alternate": "{}.html"
-      \   },
-      \   "*.html": {
-      \     "alternate": "{}.scss"
-      \   },
-      \   "*.scss": {
-      \     "alternate": "{}.ts"
-      \   }
-      \ }
+let g:alternateExtensions_ts = "html"
+let g:alternateExtensions_html = "scss,css"
+let g:alternateExtensions_scss = "ts"
+let g:alternateExtensions_css = "ts"
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" " If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
