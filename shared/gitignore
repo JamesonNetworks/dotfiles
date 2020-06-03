@@ -1,6 +1,4 @@
 *.orig
-*.swp
-.*.swp
 .~lock.*
 
 ### Vim ###
@@ -22,7 +20,22 @@ tags
 # Persistent undo
 [._]*.un~
 
-# End of https://www.toptal.com/developers/gitignore/api/vim
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+**/really_local_settings.py
+**/*.orig
+
+.idea/
+
+venv/
 
 # mypy
 .mypy_cache/
