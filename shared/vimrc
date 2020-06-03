@@ -168,3 +168,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Custom stuff
 nnoremap <leader>s :update<CR>
+
+if isdirectory(expand(".git"))
+	let g:NERDTreeBookmarksFile = '.git/.nerdtree-bookmarks'
+endif
