@@ -46,7 +46,8 @@ def installVim(args):
         copyfile(PosixPath("./shared/inputrc"), PosixPath("~/.inputrc").expanduser())
         print("Overwriting tmux")
         copyfile(PosixPath("./shared/tmux.conf"), PosixPath("~/.tmux.conf").expanduser())
-
+        print("Overwriting gitignore")
+        copyfile(PosixPath("./shared/gitignore"), PosixPath("~/.gitignore").expanduser())
 
 
 def main(args):
