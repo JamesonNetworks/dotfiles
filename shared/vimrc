@@ -122,9 +122,6 @@ let g:ycm_global_ycm_extra_conf='~/.vim/bundle/youcompleteme/.ycm_extra_conf.py'
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" Autoclose nerdtree on no windows
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 " NERDTree Mappings
 autocmd Filetype nerdtree nnoremap <buffer> <leader>b :Bookmark 
 
