@@ -181,3 +181,14 @@ inoremap <F5> <C-o>:set list!<CR>
 cnoremap <F5> <C-c>:set list!<CR>
 
 let NERDTreeWinSize=60
+
+" Trim trailing whitespace
+
+fun! <SID>StripTrailingWhitespaces()
+	let l = line(".")
+	let c = col(".")
+	keepp %s/\s\+$//e
+	call cursor(l, c)
+endfun
+
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
