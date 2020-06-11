@@ -107,3 +107,4 @@ alias dcu="docker-compose up"
 alias tmux="TERM=screen-256color-bce tmux"
 set -g default-terminal "screen-256color"
 
+alias ls='ls -lartG'
