@@ -123,7 +123,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " NERDTree Mappings
-autocmd Filetype nerdtree nnoremap <buffer> <leader>b :Bookmark 
+autocmd Filetype nerdtree nnoremap <buffer> <leader>b :Bookmark
 
 " NERDTree launch
 silent! map <F3> :NERDTreeFind<CR>
@@ -192,3 +192,5 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+nnoremap <leader>o :sp<CR>:A<CR>:sp<CR>:A<CR>
