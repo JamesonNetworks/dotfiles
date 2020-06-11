@@ -36,6 +36,9 @@ Plugin 'a.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
 " Ignore pyc files in nerdtree
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
@@ -53,7 +56,7 @@ set foldmethod=indent
 set foldlevel=99
 
 " Enable folding with the spacebar
-nnoremap <space> za
+nnoremap <leader> f
 
 " PEP Indentation
 au BufNewFile,BufRead *.py,*.ts set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=120 expandtab autoindent fileformat=unix
