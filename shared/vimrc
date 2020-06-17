@@ -197,7 +197,7 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 nnoremap <leader>o :sp<CR>:A<CR>:sp<CR>:A<CR><C-W><C-K><C-W><C-K>
 nnoremap <leader>c <C-W><C-J>:x<CR><C-W><C-J>:x<CR>
 
-let NERDTreeIgnore=['\.spec.ts$', '\.html$', '\.scss$', '\.css$', '\~$']
+let NERDTreeIgnore=['\.swp$', '\.spec.ts$', '\.html$', '\.scss$', '\.css$', '\~$']
 
 nnoremap <leader>a :A<CR>
 
