@@ -31,6 +31,7 @@ Plugin 'mitermayer/prettier'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'taglist.vim'
 Plugin 'a.vim'
+Plugin 'troydm/zoomwintab.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -211,3 +212,5 @@ endfunction
 com! -nargs=+ -complete=command Bufdo call BufDo(<q-args>)
 
 nnoremap <leader>s :Bufdo update<CR>
+
+nnoremap <leader>z :ZoomWinTabToggle<CR>
