@@ -97,4 +97,7 @@ venv/
 
 # mypy
 .mypy_cache/
+
 .ycm_extra_conf.py
+
+.session.vim

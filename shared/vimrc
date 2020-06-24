@@ -217,3 +217,13 @@ nnoremap <leader>s :Bufdo update<CR>
 nnoremap <leader>z :ZoomWinTabToggle<CR>
 
 nnoremap <leader>q :Bdelete hidden<CR>
+
+
+
+fu! SaveSess()
+    execute 'mksession! ' . getcwd() . '/.session.vim'
+endfunction
+
+autocmd VimLeave * NERDTreeTabsClose
+autocmd VimLeave * call SaveSess()
+autocmd VimEnter * NERDTree
