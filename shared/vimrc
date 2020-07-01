@@ -32,7 +32,6 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'taglist.vim'
 Plugin 'a.vim'
 Plugin 'troydm/zoomwintab.vim'
-Plugin 'Asheq/close-buffers.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -216,14 +215,11 @@ nnoremap <leader>s :Bufdo update<CR>
 
 nnoremap <leader>z :ZoomWinTabToggle<CR>
 
-nnoremap <leader>q :Bdelete hidden<CR>
 
+"fu! SaveSess()
+"    execute 'mksession! ' . getcwd() . '/.session.vim'
+"endfunction
 
-
-fu! SaveSess()
-    execute 'mksession! ' . getcwd() . '/.session.vim'
-endfunction
-
-autocmd VimLeave * NERDTreeTabsClose
-autocmd VimLeave * call SaveSess()
-autocmd VimEnter * NERDTree
+"autocmd VimLeave * NERDTreeTabsClose
+"autocmd VimLeave * call SaveSess()
+"autocmd VimEnter * NERDTree

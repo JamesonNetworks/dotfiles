@@ -114,4 +114,4 @@ export NVM_DIR="$HOME/.nvm"
 
 alias ls='ls -lartG'
 
-alias vim='vim -S .session.vim'
+#alias vim='vim -S .session.vim'
