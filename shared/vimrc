@@ -58,11 +58,13 @@ set foldlevel=99
 nnoremap <leader>f za
 
 " PEP Indentation
-au BufNewFile,BufRead *.py,*.ts set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=120 expandtab autoindent fileformat=unix
+au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=120 expandtab autoindent fileformat=unix
 
-au BufNewFile,BufRead *.js,*.css,*.scss set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=120
+au BufNewFile,BufRead *.ts, *.js set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=140 expandtab autoindent fileformat=unix
 
-au BufNewFile,BufRead *.html set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=120
+au BufNewFile,BufRead *.css,*.scss set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=140
+
+au BufNewFile,BufRead *.html set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=140
 
 " Flag whitespace
 highlight BadWhitespace ctermbg=red guibg=darkred
@@ -118,7 +120,7 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming em
 " Python YouCompleteMe
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/youcompleteme/.ycm_extra_conf.py'
 
-:set colorcolumn=80,120
+:set colorcolumn=80,120,140
 
 " NERDTree settings
 autocmd StdinReadPre * let s:std_in=1
