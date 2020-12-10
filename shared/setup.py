@@ -49,6 +49,16 @@ def installVim(args):
         print("Overwriting gitignore")
         copyfile(PosixPath("./shared/gitignore"), PosixPath("~/.gitignore").expanduser())
 
+def installNeoVim(args):
+    print("Checking for Vim directory")
+    vimDir = PosixPath("~/.config/nvim/").expanduser()
+    if not vimDir.exists():
+        print("Neovim config dir not found, need to install...")
+    else:
+        copyfile(PosixPath("./shared/init.vim"), PosixPath("~/.config/nvim/init.vim").expanduser())
+
+
+
 
 def main(args):
     print("Running Shared Environment setup...")
@@ -58,3 +68,6 @@ def main(args):
 
     print("Executing VIM Install Process...")
     installVim(args=args)
+
+    print("Executing Neovim Install Process...")
+    installNeoVim(args=args)
