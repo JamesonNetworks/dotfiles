@@ -229,7 +229,7 @@ function! BufDo(command)
 endfunction
 com! -nargs=+ -complete=command Bufdo call BufDo(<q-args>)
 
-nnoremap <leader>s :Bufdo update<CR>
+"nnoremap <leader>s :Bufdo update<CR>
 
 nnoremap <leader>z :ZoomWinTabToggle<CR>
 
