@@ -218,7 +218,7 @@ nnoremap <leader>c <C-W><C-J>:x<CR><C-W><C-J>:x<CR>
 
 let NERDTreeIgnore=['\.swp$', '\.spec.ts$', '\.html$', '\.scss$', '\.css$', '\~$']
 
-nnoremap <leader>p :A<CR>
+nnoremap <leader>s :A<CR>
 
 set hidden
 " Like bufdo but restore the current buffer.
