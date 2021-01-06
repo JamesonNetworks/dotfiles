@@ -56,7 +56,14 @@ def installNeoVim(args):
         print("Neovim config dir not found, need to install...")
     else:
         copyfile(PosixPath("./shared/init.vim"), PosixPath("~/.config/nvim/init.vim").expanduser())
-
+        copyfile(PosixPath("./shared/plug.vim"), PosixPath("~/.config/nvim/autoload/plug.vim").expanduser())
+        os.system("python3 -m pip install --user --upgrade pynvim")
+        print("Additional Notes:")
+        print("================")
+        print("Install universal-ctags...")
+        print("https://github.com/universal-ctags/ctags")
+        print("Install the coc-json and coc-tsserver in nvim:")
+        print(":CocInstall coc-json coc-tsserver")
 
 
 
