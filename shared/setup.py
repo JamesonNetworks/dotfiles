@@ -1,6 +1,6 @@
 from pathlib import PosixPath
 import os
-from shutil import copyfile
+from shutil import copyfile, SameFileError
 
 
 def installZsh(args):
@@ -76,9 +76,12 @@ def copySnippets(args):
     if not snippetsDir.exists():
         print("Directory not created, creating...")
         snippetsDir.mkdir(parents=True, exist_ok=True)
-    copyfile(PosixPath("./snippets/html.snippets"), PosixPath("~/.config/nvim/UltiSnips/html.snippets").expanduser())
-    copyfile(PosixPath("./snippets/typescript.snippets"), PosixPath("~/.config/nvim/UltiSnips/typescript.snippets").expanduser())
-    copyfile(PosixPath("./snippets/scss.snippets"), PosixPath("~/.config/nvim/UltiSnips/scss.snippets").expanduser())
+    try:
+        copyfile(PosixPath("./snippets/html.snippets"), PosixPath("~/.config/nvim/UltiSnips/html.snippets").expanduser())
+        copyfile(PosixPath("./snippets/typescript.snippets"), PosixPath("~/.config/nvim/UltiSnips/typescript.snippets").expanduser())
+        copyfile(PosixPath("./snippets/scss.snippets"), PosixPath("~/.config/nvim/UltiSnips/scss.snippets").expanduser())
+    except SameFileError:
+        print("Same files detected, snips may be symlinked. Ignoring...")
 
 
 def main(args):

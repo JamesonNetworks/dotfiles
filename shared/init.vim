@@ -173,6 +173,11 @@ call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
+
 let g:alternateExtensions_ts = "html"
 let g:alternateExtensions_html = "scss,css"
 let g:alternateExtensions_scss = "ts"
