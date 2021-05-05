@@ -66,6 +66,20 @@ def installNeoVim(args):
         print(":CocInstall coc-json coc-tsserver")
 
 
+def copySnippets(args):
+    print("Checking for the snippets configuration directory")
+    vimDir = PosixPath("~/.config/nvim/").expanduser()
+    if not vimDir.exists():
+        print("Neovim config dir not found, need to install...")
+        return
+    snippetsDir = PosixPath("~/.config/nvim/UltiSnips").expanduser()
+    if not snippetsDir.exists():
+        print("Directory not created, creating...")
+        snippetsDir.mkdir(parents=True, exist_ok=True)
+    copyfile(PosixPath("./snippets/html.snippets"), PosixPath("~/.config/nvim/UltiSnips/html.snippets").expanduser())
+    copyfile(PosixPath("./snippets/typescript.snippets"), PosixPath("~/.config/nvim/UltiSnips/typescript.snippets").expanduser())
+    copyfile(PosixPath("./snippets/scss.snippets"), PosixPath("~/.config/nvim/UltiSnips/scss.snippets").expanduser())
+
 
 def main(args):
     print("Running Shared Environment setup...")
@@ -78,3 +92,6 @@ def main(args):
 
     print("Executing Neovim Install Process...")
     installNeoVim(args=args)
+
+    print("Copying Snippets...")
+    copySnippets(args=args)
