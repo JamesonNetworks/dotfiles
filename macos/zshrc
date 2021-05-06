@@ -119,3 +119,7 @@ alias gs="git status"
 alias ga="git add . && git status"
 alias gd="git diff HEAD"
 alias gc="git commit"
+alias gp="git push"
+alias gpu="git push -u origin HEAD"
+
+alias c="clear"
