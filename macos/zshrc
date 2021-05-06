@@ -114,3 +114,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #alias vim='vim -S .session.vim'
+
+alias gs="git status"
+alias ga="git add . && git status"
+alias gd="git diff HEAD"
+alias gc="git commit"
