@@ -81,12 +81,8 @@ let g:gutentags_ctags_exclude = [
 " From vimrc:
 "
 
-if has('gui_running')
-  set background=dark
-  colorscheme solarized
-else
-  colorscheme zenburn
-endif
+set background=dark
+colorscheme solarized
 
 let mapleader = ","
 
