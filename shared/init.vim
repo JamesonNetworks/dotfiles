@@ -109,7 +109,7 @@ nnoremap <leader>j <C-]>
 " PEP Indentation
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=120 expandtab autoindent fileformat=unix
 
-au BufNewFile,BufRead *.ts,*.js set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=140 expandtab smarttab
+au BufNewFile,BufRead *.ts,*.js set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=140 expandtab smarttab
 
 au BufNewFile,BufRead *.css,*.scss set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=140 expandtab smarttab
 
